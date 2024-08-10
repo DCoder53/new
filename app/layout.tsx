@@ -1,4 +1,5 @@
 // layout.tsx
+
 import "./global.css";
 import Navbar from "@/components/Navbar";
 import { ClerkProvider, RedirectToSignUp, SignedOut } from "@clerk/nextjs";
