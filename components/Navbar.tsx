@@ -15,7 +15,7 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   }
 
-  const isActive = (path) => pathname === path ? 'underline' : ''
+  const isActive = (path : string) => pathname === path ? 'underline' : ''
 
   return (
     <nav className='fixed w-full h-24 shadow-xl bg-white'>
