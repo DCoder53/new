@@ -118,10 +118,11 @@ const DailyPage: React.FC = () => {
                   <span>Posted at: {new Date(msg.createdAt).toLocaleString()}</span>
                 </div>
                 <div className="flex mt-4 space-x-6">
-                  <button 
-                    className={`flex items-center ${msg.likedBy.includes(user?.id) ? 'text-red-500' : 'text-gray-500'} hover:text-red-700 focus:outline-none`}
+                 <button
+                    className={`flex items-center ${msg.likedBy.includes(user?.id ?? '') ? 'text-red-500' : 'text-gray-500'} hover:text-red-700 focus:outline-none`}
                     onClick={() => handleLike(msg._id)}
-                  >
+                 >
+
                     <FontAwesomeIcon icon={faHeart} className="h-5 w-5 mr-1" />
                     {msg.likes}
                   </button>
