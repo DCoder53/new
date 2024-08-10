@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="en">
         <body>
           <header>
@@ -18,7 +18,9 @@ export default function RootLayout({
             </SignedOut>
           </header>
           <Navbar />
-          <main className="pt-24">{children}</main>
+          <main className="pt-24">
+            {children}
+          </main>
         </body>
       </html>
     </ClerkProvider>
