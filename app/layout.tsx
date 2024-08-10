@@ -1,12 +1,12 @@
 // layout.tsx
-import "./global.css"
+import "./global.css";
 import Navbar from "@/components/Navbar";
-import { ClerkProvider , RedirectToSignUp , SignedOut } from '@clerk/nextjs'
+import { ClerkProvider, RedirectToSignUp, SignedOut } from "@clerk/nextjs";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <ClerkProvider>
@@ -18,11 +18,9 @@ export default function RootLayout({
             </SignedOut>
           </header>
           <Navbar />
-          <main className="pt-24">
-            {children}
-          </main>
+          <main className="pt-24">{children}</main>
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
